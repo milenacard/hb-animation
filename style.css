@@ -1,0 +1,63 @@
+.square {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(167, 24, 24);
+    border: 1px solid black;
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.square__hover{
+    transition: background 2s;
+}
+.square__hover:hover{
+    background-color: rgb(15, 114, 10);
+}
+
+.square__animation{
+    animation: changedColor 2s infinite;
+}
+
+.square__motion--distance{
+    animation: changedPosition 2s infinite;
+}
+
+.square__motion--curve2{
+    animation: changedPosition 2s ease-in-out infinite;
+}
+
+.square__motion--curve3{
+    animation: changedPosition 2s cubic-bezier(.09, .76, .91, .14) infinite;
+}
+
+@keyframes changedPosition {
+    0% { 
+        transform: translateX(0);
+    }
+    30% { 
+        transform: translateX(100px);
+    }
+    80%{ 
+        transform: translateX(300px);
+    }
+}
+
+@keyframes changedColor {
+    0% { 
+        background-color: green;
+    }
+    30% { 
+        background-color: rgb(139, 16, 201);
+    }
+    50%{ 
+        background-color: rgb(207, 247, 6);
+    }
+    90% { 
+        background-color: rgb(230, 9, 112);
+    }
+  }
